@@ -2,12 +2,12 @@ import asyncio
 import time
 import random
 
-async def jadwal_perjalanan(stasiun):
+async def jadwal_perjalanan(stasiun: str):
     print(f"Memproses jadwal perjalanan kereta api di stasiun {stasiun}")
     await asyncio.sleep(random.randint(0, 5))
     print(f"Jadwal perjalanan kereta api di stasiun {stasiun} selesai")
 
-async def penjadwalan_kereta(stasiun, end_time, loop):
+async def penjadwalan_kereta(stasiun: str, end_time: float, loop: asyncio.AbstractEventLoop):
     await jadwal_perjalanan(stasiun)
     if (loop.time() + 1.0) < end_time:
         loop.call_later(1, penjadwalan_kereta, stasiun, end_time, loop)
