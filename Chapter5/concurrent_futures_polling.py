@@ -1,17 +1,16 @@
 import concurrent.futures
 import time
-from multiprocessing import Manager
 
 stasiun_kereta = ['Gambir', 'Bandung', 'Yogyakarta', 'Surabaya', 'Malang']
 
 
-def jadwal_perjalanan(stasiun):
+def jadwal_perjalanan(stasiun: str) -> str:
     print(f"Memproses jadwal perjalanan kereta api di stasiun {stasiun}")
     time.sleep(1)
     return f"Jadwal perjalanan kereta api di stasiun {stasiun} selesai."
 
 
-def penjadwalan_kereta(stasiun):
+def penjadwalan_kereta(stasiun: str):
     result = jadwal_perjalanan(stasiun)
     print(result)
 

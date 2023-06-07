@@ -15,7 +15,7 @@ async def penjadwalan_kereta():
     print('Proses Transisi:\nMemulai penjadwalan kereta api memanggil ' + result)
 
 
-async def jadwal_perjalanan_1(transition_value):
+async def jadwal_perjalanan_1(transition_value: int) -> str:
     output_value = 'Jadwal Perjalanan 1 dengan nilai transisi = %s\n' % transition_value
     input_value = randint(0, 1)
     await asyncio.sleep(1)
@@ -29,7 +29,7 @@ async def jadwal_perjalanan_1(transition_value):
     return output_value + 'Jadwal Perjalanan 1 memanggil %s' % result
 
 
-async def jadwal_perjalanan_2(transition_value):
+async def jadwal_perjalanan_2(transition_value: int) -> str:
     output_value = 'Jadwal Perjalanan 2 dengan nilai transisi = %s\n' % transition_value
     input_value = randint(0, 1)
     await asyncio.sleep(1)
@@ -43,7 +43,7 @@ async def jadwal_perjalanan_2(transition_value):
     return output_value + 'Jadwal Perjalanan 2 memanggil %s' % result
 
 
-async def jadwal_perjalanan_3(transition_value):
+async def jadwal_perjalanan_3(transition_value: int) -> str:
     output_value = 'Jadwal Perjalanan 3 dengan nilai transisi = %s\n' % transition_value
     input_value = randint(0, 1)
     await asyncio.sleep(1)
@@ -57,7 +57,7 @@ async def jadwal_perjalanan_3(transition_value):
     return output_value + 'Jadwal Perjalanan 3 memanggil %s' % result
 
 
-async def end_state(transition_value):
+async def end_state(transition_value: int) -> str:
     output_value = 'End State dengan nilai transisi = %s\n' % transition_value
     print('...menghentikan komputasi...')
     return output_value
